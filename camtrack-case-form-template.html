@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>CAMTRACK ISSUE MANGEMENT </title>
+
+     <meta name="description" content="GESTION DES REQUETTES CLIENTS CAMTRACK">
+  
+  <meta name="author" content="Olivier Kamdem">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <!-- Include Bootstrap CSS from CDN -->
+      <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
+      <!-- You can include Custom Styling -->
+      <style>
+         .note
+         {
+            text-align: center;
+         
+            background: -webkit-linear-gradient(left, #fff, #ccc);
+            color: #fff;
+            font-weight: bold;
+            line-height: 80px;
+            margin-bottom: 10px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            
+         }
+
+         #main_section {
+            padding:10px;
+         }
+         input[type="text"], select {
+            width: 90%;
+         }
+         option {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 20px;
+         }
+         @media (min-width: 960px) {
+            #captcha_section {
+               margin-left: 55px;
+            }
+         }
+       fieldset.row.span11 {
+    margin-bottom: 80px;
+     }
+         .container-fluid{
+            padding: 0px;
+            margin: 0px;
+         }
+         .inputreq .textarea{
+            margin: 0px 0px 10px; 
+            width: 939px;
+             height: 118px;
+         }
+         .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            margin-top:40px;
+            width: 100%;
+            background-color: #253469;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            }
+      </style>
+   </head>
+   <body>
+
+      <div class="container-fluid">
+         <div class="note position-fixed">
+            <img src="https://system.netsuite.com/core/media/media.nl?id=793&c=6231079&h=bdYXO2dh0bGhuHZNkLpftTz4mmM8c4oxLbO6lPiDiht1MQD-"  alt="BANNER ISSUES MANAGEMENT CAMTRACK" class="img-fluid" width='100%'>
+        </div>
+      </div>
+
+      <!-- This section is for the main body and the form -->
+      <div id="main_section" class="container">
+         <div class="page-header">
+            
+             
+             <nav aria-label="breadcrumb">
+               <ol class="breadcrumb">
+                 <li class="breadcrumb-item"><a target="_blank" href="http://6231079-sb1.shop.netsuite.com/s.nl?c=6231079_SB1&n=1">Accueil   /  </a></li>
+                 <li class="breadcrumb-item active" aria-current="page"> Créer un nouveau ticket</li>
+               </ol>
+             </nav>
+         </div>
+
+         <!-- This is required by NetSuite as it will generate the form element which will do a POST request to the back-end -->
+         <NLFORM>
+
+            <!-- Now you can specify your fields. You can use CRMSDK or what is commonly called the NL tags on this HTML Document -->
+            <fieldset class="row span11">
+               <div class="span5">
+                  <div class="control-group">
+                     <label class="control-label">Nom*</label>
+                     <div class="controls">
+
+                          <!-- Add firstname customer catégorie - build by Olivier Kamdem-->
+                        <NLFIRSTNAME>
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <label class="control-label">Prénom*</label>
+                     <div class="controls">
+
+                        <!-- This will be translated by NetSuite to an input field for Last Name -->
+                        <NLLASTNAME>
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <label class="control-label">Entreprise*</label>
+                     <div class="controls">
+
+                         <!-- Add company - build by Olivier Kamdem-->
+                        <NLCOMPANYNAME>
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <!-- <label class="control-label">*Filiale</label> -->
+                     <div class="controls">
+
+                        <!-- Add hiden filiale - build by Olivier Kamdem-->
+                      <NLSUBSIDIARY>
+                     </div>
+                  </div>
+                 <div class="control-group">
+                     <!-- <label class="control-label">*Filiale</label> -->
+                     <div class="controls">
+
+                         <!-- Add name customer- build by Olivier Kamdem-->
+                        <NLORIGIN>
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <label class="control-label">Email*</label>
+                     <div class="controls">
+
+                        <!-- Add email customer - build by Olivier Kamdem-->
+                        <NLEMAIL>
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <label class="control-label">Sujet de la requette*</label>
+                     <div class="controls">
+
+                         <!-- Add sujet case - build by Olivier Kamdem-->
+                        <NLTITLE>
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     
+                     <div class="controls">
+                         <!-- Of course we need a way to submit our form so we need to include none other than the Submit button -->
+                     <input id="submitorder" name="submitted" type="submit" class="btn btn-primary" style="margin-top: 20px;" value="Envoyer" />
+                     <input id="submitorder" type="reset" class="btn btn-default" style="margin-top: 20px;" value="Annuler" />
+                     </div>
+                  </div>
+               </div>
+               <div class="span5">
+                 
+                  <div class="control-group">
+                     <label class="control-label"> Catégorie*</label>
+                     <div class="controls">
+
+                          <!-- Add list Type - build by Olivier Kamdem-->
+                        <NLCUSTEVENT1>
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <label class="control-label">*Type</label>
+                     <div class="controls">
+
+                      <!-- Add list catégorie - build by Olivier Kamdem-->
+                        <NLCATEGORY>
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <label class="control-label">*Libéllé</label>
+                     <div class="controls">
+
+                       <!-- Add List issue build by Olivier Kamdem-->
+                        <NLISSUE>  
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <label class="control-label">Descirption</label>
+                     <div class="controls">
+   
+                       <!-- Add fiied message textarea build by Olivier Kamdem-->
+                        <NLINCOMINGMESSAGE>
+   
+                     </div>
+                  </div>
+                  <div class="control-group">
+                     <label class="control-label">Joindre un fichier illustrant l'incident</label>
+                     <div class="controls">
+
+                        <!-- Add file build by Olivier Kamdem-->
+                        <NLFILE>  
+                     </div>
+                  </div>
+                  
+                  
+               </div>
+            </fieldset>
+           
+         </form>
+      </div>
+      <footer class="footer">
+         <div class="container">
+         <div class="pull-left">
+            <b>Copyright © 2020 <a href="#">CAMTRACK SAS</a>.</b> All rights --&gt;
+         reserved.
+         </div>
+        
+         <div class="pull-right hidden-xs">
+            <b>Version</b> 1.0.0
+          </div>
+       </div>
+       </footer>
+      <!-- Include jQuery library. This is a dependency of bootstrap and we will also use this later on. -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+         <script>
+            //$breadcrumb-divider: quote(">");
+         </script>
+      <!-- Include the Bootstrap JavaScript library -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   </body>
+</html>
